@@ -47,6 +47,8 @@
 
 ### С прекомпиляций шаблонов
 
+<table>
+
 <tr>
 <th>Данные</th>
 <th>Erlang/bbmustache</th>
@@ -118,7 +120,7 @@ bbmustache с прекомпиляцией:
 Для bbmustache важно использовать опцию _{key\_type, string}_ (или не указывать опции, это будет по умолчанию). _{key\_type, binary}_ замедляет рендер, в некоторых случая существенно.
 
 И для сравнения ErlyDTL https://github.com/erlydtl/erlydtl с прекомпиляцией:
-[mustache_pc_bm2.erl](erl_erlydtl/src/mustache_pc_bm2.erl)
+[mustache_bm3.erl](erl_erlydtl/src/mustache_bm3.erl)
 (Для 3-го шаблона тест не делался, т.к. он несовместим с DTL).
 
 ## Go
