@@ -17,7 +17,7 @@
 
 <tr>
 <td>Шаблон 1</td>
-<td>63,329</td>
+<td>23,971</td>
 <td>33,649</td>
 <td>35,620</td>
 <td>80,622</td>
@@ -26,7 +26,7 @@
 
 <tr>
 <td>Шаблон 2</td>
-<td>21,738</td>
+<td>16,471</td>
 <td>8,330</td>
 <td>11,600</td>
 <td>17,357</td>
@@ -35,7 +35,7 @@
 
 <tr>
 <td>Шаблон 3</td>
-<td>35,642</td>
+<td>31,246</td>
 <td>12,442</td>
 <td>16,188</td>
 <td>33,220</td>
@@ -59,7 +59,7 @@
 
 <tr>
 <td>Шаблон 1</td>
-<td>1,731</td>
+<td>1,814</td>
 <td>
 <td>
 <td>
@@ -69,7 +69,7 @@
 
 <tr>
 <td>Шаблон 2</td>
-<td>2,329</td>
+<td>2,525</td>
 <td>
 <td>
 <td>
@@ -79,7 +79,7 @@
 
 <tr>
 <td>Шаблон 3</td>
-<td>1,893</td>
+<td>2,265</td>
 <td>
 <td>
 <td>
@@ -114,6 +114,8 @@
 
 bbmustache с прекомпиляцией:
 [mustache_pc_bm.erl](erl_bbmustache/src/mustache_pc_bm.erl)
+
+Для bbmustache важно использовать опцию _{key\_type, string}_ (или не указывать опции, это будет по умолчанию). _{key\_type, binary}_ замедляет рендер, в некоторых случая существенно.
 
 И для сравнения ErlyDTL https://github.com/erlydtl/erlydtl с прекомпиляцией:
 [mustache_pc_bm2.erl](erl_erlydtl/src/mustache_pc_bm2.erl)

@@ -25,7 +25,7 @@ do_test(DataFile, BindingsFile, NumTests) ->
     Bindings2 = jiffy:decode(Bindings, [return_maps]),
 
     T1 = erlang:system_time(milli_seconds),
-    [bbmustache:compile(Template, Bindings2) || _ <- lists:seq(1, NumTests)],
+    [bbmustache:compile(Template, Bindings2, [{key_type, string}]) || _ <- lists:seq(1, NumTests)],
     T2 = erlang:system_time(milli_seconds),
     io:format("~p~n", [T2 - T1]),
     init:stop().
