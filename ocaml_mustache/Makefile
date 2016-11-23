@@ -1,5 +1,6 @@
 compile:
 	corebuild -pkg ezjsonm -pkg mustache -I src mustache_bm.native
+	corebuild -pkg ezjsonm -pkg mustache -I src mustache_pc_bm.native
 
 
 gep_deps:
@@ -18,3 +19,12 @@ test2: compile
 
 test3: compile
 	./mustache_bm.native ../data/template3.html ../data/bindings3.json 1000000
+
+test4: compile
+	./mustache_pc_bm.native ../data/template1.html ../data/bindings1.json 1000000
+
+test5: compile
+	./mustache_pc_bm.native ../data/template2.html ../data/bindings2.json 1000000
+
+test6: compile
+	./mustache_pc_bm.native ../data/template3.html ../data/bindings3.json 1000000
