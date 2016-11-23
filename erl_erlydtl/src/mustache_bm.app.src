@@ -1,0 +1,12 @@
+{application, mustache_bm, [
+    {description, "mustache benchmark"},
+    {vsn, "1"},
+    {registered, []},
+    {applications, [
+        kernel,
+        stdlib,
+        lager
+    ]},
+    {env,[]},
+    {modules, []}
+]}.

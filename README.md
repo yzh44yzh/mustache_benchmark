@@ -60,7 +60,7 @@
 <tr>
 <td>Шаблон 1</td>
 <td>1,814</td>
-<td>
+<td>29,495</td>
 <td>
 <td>
 <td>
@@ -70,7 +70,7 @@
 <tr>
 <td>Шаблон 2</td>
 <td>2,525</td>
-<td>
+<td>7,293</td>
 <td>
 <td>
 <td>
@@ -80,7 +80,7 @@
 <tr>
 <td>Шаблон 3</td>
 <td>2,265</td>
-<td>
+<td>x</td>
 <td>
 <td>
 <td>
@@ -119,7 +119,7 @@ bbmustache с прекомпиляцией:
 
 И для сравнения ErlyDTL https://github.com/erlydtl/erlydtl с прекомпиляцией:
 [mustache_pc_bm2.erl](erl_erlydtl/src/mustache_pc_bm2.erl)
-
+(Для 3-го шаблона тест не делался, т.к. он несовместим с DTL).
 
 ## Go
 
