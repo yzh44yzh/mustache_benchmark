@@ -2,6 +2,8 @@
 
 Результаты скорости рендера в миллисекундах, для 3-х разных шаблонов, количество прогонов 1М.
 
+### Без прекомпиляции шаблонов
+
 <table>
 
 <tr>
@@ -43,6 +45,50 @@
 </table>
 
 
+### С прекомпиляций шаблонов
+
+<tr>
+<th>Данные</th>
+<th>Erlang/bbmustache</th>
+<th>Erlang/erlydtl</th>
+<th>Go</th>
+<th>Scala/scalate</th>
+<th>Scala/mustache</th>
+<th>OCaml</th>
+</tr>
+
+<tr>
+<td>Шаблон 1</td>
+<td>1,731</td>
+<td>
+<td>
+<td>
+<td>
+<td>
+</tr>
+
+<tr>
+<td>Шаблон 2</td>
+<td>2,329</td>
+<td>
+<td>
+<td>
+<td>
+<td>
+</tr>
+
+<tr>
+<td>Шаблон 3</td>
+<td>1,893</td>
+<td>
+<td>
+<td>
+<td>
+<td>
+</tr>
+
+</table>
+
 
 ##  Шаблоны
 
@@ -64,7 +110,13 @@
 
 Вторая реализация *Erlang/fast* использует простую функцию на основне binary:split, которая умеет заменять переменные в шаблоне.
 
-[mustache_bm.erl](erl_fast/src/mustache_bm2.erl)
+[mustache_bm2.erl](erl_fast/src/mustache_bm2.erl)
+
+bbmustache с прекомпиляцией:
+[mustache_pc_bm.erl](erl_bbmustache/src/mustache_pc_bm.erl)
+
+И для сравнения ErlyDTL https://github.com/erlydtl/erlydtl с прекомпиляцией:
+[mustache_pc_bm2.erl](erl_erlydtl/src/mustache_pc_bm2.erl)
 
 
 ## Go

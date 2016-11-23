@@ -1,4 +1,4 @@
--module(mustache_bm).
+-module(mustache_pc_bm).
 
 -export([main/1]).
 
@@ -19,15 +19,13 @@ main(Args) ->
 do_test(DataFile, BindingsFile, NumTests) ->
     io:format("do_test ~p ~p ~p~n", [DataFile, BindingsFile, NumTests]),
     {ok, Data} = file:read_file(DataFile),
+    Template = bbmustache:parse_binary(Data),
+
     {ok, Bindings} = file:read_file(BindingsFile),
     Bindings2 = jiffy:decode(Bindings, [return_maps]),
 
     T1 = erlang:system_time(milli_seconds),
-    [test(Data, Bindings2) || _ <- lists:seq(1, NumTests)],
+    [bbmustache:compile(Template, Bindings2) || _ <- lists:seq(1, NumTests)],
     T2 = erlang:system_time(milli_seconds),
     io:format("~p~n", [T2 - T1]),
     init:stop().
-
-
-test(Data, Bindings) ->
-    bbmustache:render(Data, Bindings, [{key_type, binary}]).
