@@ -12,3 +12,4 @@ test2: compile
 
 test3: compile
 	./bin/mbm ../data/template3.html ../data/bindings3.json 1000000
+

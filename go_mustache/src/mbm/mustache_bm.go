@@ -37,11 +37,22 @@ func main() {
 	err3 := json.Unmarshal(bindingsBin, &bindings)
 	check(err3)
 
+	// with precompiled template
+	tmpl, err4 := mustache.ParseString(data)
+	check(err4)
+
 	t1 := time.Now()
 	for i := 0; i < numTests; i++ {
-		_, err4 := mustache.Render(data, bindings)
-		check(err4)
+		_, err5 := tmpl.Render(bindings)
+		check(err5)
 	}
+
+	// without precompiled template
+	//t1 := time.Now()
+	//for i := 0; i < numTests; i++ {
+	//	_, err4 := mustache.Render(data, bindings)
+	//	check(err4)
+	//}
 	t2 := time.Now()
 	diff := t2.Sub(t1)
 	fmt.Println(diff)
